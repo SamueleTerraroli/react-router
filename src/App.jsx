@@ -1,6 +1,20 @@
+import { BrowserRouter, Routers, Route } from 'react-router-dom'
+
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import PostsPage from './pages/PostsPage'
+
 const App = () => {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route path='/' Component={HomePage} />
+          <Route path='/chi-siamo' Component={AboutPage} />
+          <Route path='/posts' Component={PostsPage} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
